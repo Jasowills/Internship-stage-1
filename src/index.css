@@ -1,4 +1,6 @@
-
+*{
+  overflow-x: hidden;
+}
 body {
   margin: 0;
   padding: 0;
@@ -8,8 +10,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  
   box-sizing: border-box;
 }
 
@@ -23,17 +24,30 @@ body {
 .image-container{
   width: 100%;
   margin: auto;
- 
   text-align: center;
   color: black;
   font-size: 23px;
+  display: flex;
+  flex-direction: column;
 }
 .img{
-  width: 25%;
+  width: 20%;
   margin: auto;
   display: flex;
   border-radius: 50%;
-  padding: 1rem;
+  
+}
+.icon{
+  display: block;
+  width: 22px;
+  cursor: pointer;
+}
+.contain{
+  display: flex;
+  justify-content: center;
+  width: 85%;
+  margin: auto;
+  
 }
 .links{
   display: flex;
@@ -53,12 +67,13 @@ body {
   color: black;
   font-size: 18px;
   text-decoration: none;
+  text-align: center;
 }
 .profiles{
   margin: auto;
   width: 10%;
-  padding: 1rem;
-  display: flex;
+
+ display: flex;
   justify-content: space-evenly;
 }
 .profiles img{
@@ -69,24 +84,51 @@ body {
   border-top: lightgrey solid 1px;
    display: flex;
     align-items: center;
-    padding: 48px 0px;
-    gap: 64px;
   justify-content: space-evenly;
-    position: absolute;
     width: 100%;
-    height: 50px;
-    left: 0px;
-    top: 998px;
+    height: 100px;
     background: #FFFFFF;
+    margin-top: 50px;
 }
 .footer-img{
   width: 12%;
 }
 
-
-@media screen and (max-width: 500px) {
+.iconmore{
+  display: none;
+}
+@media screen and (max-width: 1000px) {
   .img {
-    width: 120px;
+    width: 30%;
+  }
+  .profiles{
+    width: 40%;
+  }
+  .links{
+    width: 100%;
+  }
+  .profiles a img{
+    width: 50%;
+  }
+  .icon{
+    display: none;
+  }
+    .footer {
+      border-top: lightgrey solid 1px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-evenly;
+      width: 100%;
+      height: 200px;
+      background: #FFFFFF;
+    }
+  .footer-img{
+    width: 40%;
+  }
+  .iconmore{
+    display: block;
+    width: 20px;
   }
 }@media screen and (min-width: 500px) {
   .img {
